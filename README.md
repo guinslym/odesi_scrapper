@@ -77,33 +77,27 @@ The script automatically identifies potential duplicates in the "Potential_Dupli
 
 ## Categories Scraped
 
-The script scrapes the following 25 categories:
+The script scrapes the following 19 categories:
 
 - Agriculture
 - Business and Financial
+- Census of Population
+- Communications and Information
+- Consumer Surveys
+- COVID-19
 - Crime and Justice
-- Economics
-- Education and Training
-- Energy
-- Environment
-- Geography and Cartography
-- Government and Politics
+- Demographics and Population
+- Education
+- Elections and Politics
+- Geography
+- Government Finances and Economic Indicators
 - Health
-- History
-- Housing and Shelter
-- Immigration
-- Income and Wealth
-- Information and Communication
 - Labour and Employment
-- Language and Linguistics
-- Law
-- Population and Demography
-- Recreation and Leisure
-- Religion and Values
-- Science and Technology
-- Social Services and Welfare
-- Society and Community
-- Transportation
+- Natural Resources and Environment
+- Public Opinion Polls
+- Social Surveys
+- Trade
+- Travel
 
 ## Customization
 

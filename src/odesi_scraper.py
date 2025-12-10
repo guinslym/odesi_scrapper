@@ -28,29 +28,23 @@ class ODESIScraper:
     CATEGORIES = [
         "Agriculture",
         "Business and Financial",
+        "Census of Population",
+        "Communications and Information",
+        "Consumer Surveys",
+        "COVID-19",
         "Crime and Justice",
-        "Economics",
-        "Education and Training",
-        "Energy",
-        "Environment",
-        "Geography and Cartography",
-        "Government and Politics",
+        "Demographics and Population",
+        "Education",
+        "Elections and Politics",
+        "Geography",
+        "Government Finances and Economic Indicators",
         "Health",
-        "History",
-        "Housing and Shelter",
-        "Immigration",
-        "Income and Wealth",
-        "Information and Communication",
         "Labour and Employment",
-        "Language and Linguistics",
-        "Law",
-        "Population and Demography",
-        "Recreation and Leisure",
-        "Religion and Values",
-        "Science and Technology",
-        "Social Services and Welfare",
-        "Society and Community",
-        "Transportation"
+        "Natural Resources and Environment",
+        "Public Opinion Polls",
+        "Social Surveys",
+        "Trade",
+        "Travel"
     ]
 
     def __init__(self, delay: float = 1.0):
@@ -106,6 +100,12 @@ class ODESIScraper:
 
         content = data.get('content', {})
         datasets = content.get('datasets', {})
+
+        # Handle case where datasets might be a string instead of object
+        if not isinstance(datasets, dict):
+            logger.warning(f"No datasets found for category: {category} (datasets is {type(datasets).__name__})")
+            return records
+
         items = datasets.get('items', [])
 
         for series_item in items:
